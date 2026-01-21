@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>BBQ Party Home Service</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background: #0f0f0f;
+      color: #fff;
+    }
+
+    header {
+      position: fixed;
+      width: 100%;
+      top: 0;
+      padding: 20px 80px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: rgba(0,0,0,0.7);
+      backdrop-filter: blur(10px);
+      z-index: 1000;
+    }
+
+    header h1 {
+      color: #ffb703;
+      font-size: 24px;
+      font-weight: 700;
+    }
+
+    header nav a {
+      margin-left: 25px;
+      text-decoration: none;
+      color: #fff;
+      font-weight: 500;
+    }
+
+    header nav a:hover {
+      color: #ffb703;
+    }
+
+    .hero {
+      height: 100vh;
+      background: linear-gradient(
+        rgba(0,0,0,0.7),
+        rgba(0,0,0,0.8)
+      ),
+      url('https://images.unsplash.com/photo-1558030006-450675393462') center/cover;
+      display: flex;
+      align-items: center;
+      padding: 0 80px;
+    }
+
+    .hero-content {
+      max-width: 600px;
+    }
+
+    .hero-content h2 {
+      font-size: 48px;
+      margin-bottom: 20px;
+      line-height: 1.2;
+    }
+
+    .hero-content span {
+      color: #ffb703;
+    }
+
+    .hero-content p {
+      font-size: 18px;
+      margin-bottom: 35px;
+      opacity: 0.9;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 15px 35px;
+      border-radius: 30px;
+      background: linear-gradient(90deg, #ffb703, #ff6a00);
+      color: #000;
+      font-weight: 700;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 20px rgba(255,183,3,0.6);
+    }
+
+    section {
+      padding: 100px 80px;
+    }
+
+    .features {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+      gap: 30px;
+    }
+
+    .card {
+      background: #1a1a1a;
+      border-radius: 20px;
+      padding: 30px;
+      transition: 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-10px);
+      border: 1px solid #ffb703;
+    }
+
+    .card h3 {
+      margin-bottom: 15px;
+      color: #ffb703;
+    }
+
+    .cta {
+      background: linear-gradient(135deg, #ff6a00, #ffb703);
+      color: #000;
+      text-align: center;
+      padding: 80px 40px;
+      border-radius: 30px;
+    }
+
+    .cta h2 {
+      font-size: 36px;
+      margin-bottom: 20px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px;
+      background: #000;
+      color: #aaa;
+    }
+
+    @media(max-width:768px){
+      header {
+        padding: 20px 30px;
+      }
+      section, .hero {
+        padding: 0 30px;
+      }
+      .hero-content h2 {
+        font-size: 36px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <h1>BBQ Party</h1>
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#paket">Paket</a>
+    <a href="#order">Order</a>
+  </nav>
+</header>
+
+<section class="hero" id="home">
+  <div class="hero-content">
+    <h2>BBQ Party <span>Home Service</span><br>Steak Premium ke Rumah Anda</h2>
+    <p>Nikmati BBQ eksklusif tanpa ribet. Kami datang, masak, dan sajikan langsung di lokasi Anda.</p>
+    <a href="https://wa.me/628XXXXXXXXXX" class="btn">Pesan via WhatsApp</a>
+  </div>
+</section>
+
+<section id="paket">
+  <h2 style="margin-bottom:40px;">Kenapa Pilih BBQ Kami?</h2>
+  <div class="features">
+    <div class="card">
+      <h3>🥩 Daging Premium</h3>
+      <p>US Beef, Wagyu, dan pilihan daging berkualitas.</p>
+    </div>
+    <div class="card">
+      <h3>🔥 Chef Profesional</h3>
+      <p>Dipanggang langsung oleh chef berpengalaman.</p>
+    </div>
+    <div class="card">
+      <h3>🎉 Cocok Semua Acara</h3>
+      <p>Ulang tahun, kantor, gathering, private party.</p>
+    </div>
+  </div>
+</section>
+
+<section id="order">
+  <div class="cta">
+    <h2>Siap Bikin Acara Kamu Lebih Berkelas?</h2>
+    <p>Kami melayani area Jabodetabek</p><br>
+    <a href="https://wa.me/628XXXXXXXXXX" class="btn">Chat & Booking Sekarang</a>
+  </div>
+</section>
+
+<footer>
+  <p>© 2026 BBQ Party Home Service | By Kiki</p>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>BBQ Party Home Service</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background: #0f0f0f;
+      color: #fff;
+    }
+
+    header {
+      position: fixed;
+      width: 100%;
+      top: 0;
+      padding: 20px 80px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: rgba(0,0,0,0.7);
+      backdrop-filter: blur(10px);
+      z-index: 1000;
+    }
+
+    header h1 {
+      color: #ffb703;
+      font-size: 24px;
+      font-weight: 700;
+    }
+
+    header nav a {
+      margin-left: 25px;
+      text-decoration: none;
+      color: #fff;
+      font-weight: 500;
+    }
+
+    header nav a:hover {
+      color: #ffb703;
+    }
+
+    .hero {
+      height: 100vh;
+      background: linear-gradient(
+        rgba(0,0,0,0.7),
+        rgba(0,0,0,0.8)
+      ),
+      url('https://images.unsplash.com/photo-1558030006-450675393462') center/cover;
+      display: flex;
+      align-items: center;
+      padding: 0 80px;
+    }
+
+    .hero-content {
+      max-width: 600px;
+    }
+
+    .hero-content h2 {
+      font-size: 48px;
+      margin-bottom: 20px;
+      line-height: 1.2;
+    }
+
+    .hero-content span {
+      color: #ffb703;
+    }
+
+    .hero-content p {
+      font-size: 18px;
+      margin-bottom: 35px;
+      opacity: 0.9;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 15px 35px;
+      border-radius: 30px;
+      background: linear-gradient(90deg, #ffb703, #ff6a00);
+      color: #000;
+      font-weight: 700;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 20px rgba(255,183,3,0.6);
+    }
+
+    section {
+      padding: 100px 80px;
+    }
+
+    .features {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+      gap: 30px;
+    }
+
+    .card {
+      background: #1a1a1a;
+      border-radius: 20px;
+      padding: 30px;
+      transition: 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-10px);
+      border: 1px solid #ffb703;
+    }
+
+    .card h3 {
+      margin-bottom: 15px;
+      color: #ffb703;
+    }
+
+    .cta {
+      background: linear-gradient(135deg, #ff6a00, #ffb703);
+      color: #000;
+      text-align: center;
+      padding: 80px 40px;
+      border-radius: 30px;
+    }
+
+    .cta h2 {
+      font-size: 36px;
+      margin-bottom: 20px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px;
+      background: #000;
+      color: #aaa;
+    }
+
+    @media(max-width:768px){
+      header {
+        padding: 20px 30px;
+      }
+      section, .hero {
+        padding: 0 30px;
+      }
+      .hero-content h2 {
+        font-size: 36px;
+      }
+    }
+    /* Smooth scroll & aman dari header fixed */
+html {
+  scroll-behavior: smooth;
+}
+
+section {
+  scroll-margin-top: 100px;
+}
+
+/* Gallery Grid */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+.gallery-grid img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 20px;
+  transition: 0.3s ease;
+  cursor: pointer;
+}
+
+.gallery-grid img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 15px 40px rgba(0,0,0,0.6);
+}
+
+/* Tablet */
+@media (max-width: 992px) {
+  .gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .gallery-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .gallery-grid img {
+    height: 220px;
+  }
+}
+.price-box {
+  display: none;
+  margin-top: 20px;
+  background: #000;
+  padding: 15px;
+  border-radius: 15px;
+  border: 1px solid #ffb703;
+}
+  </style>
+</head>
+<script>
+  function showBasic() {
+    document.getElementById("basic").style.display = "block";
+    document.getElementById("premium").style.display = "none";
+  }
+
+  function showPremium() {
+    document.getElementById("premium").style.display = "block";
+    document.getElementById("basic").style.display = "none";
+  }
+</script>
+<body>
+
+<header>
+  <h1>BBQ Party</h1>
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#paket">Paket</a>
+    <a href="#gallery">Gallery</a>
+  </nav>
+</header>
+
+<section class="hero" id="home">
+  <div class="hero-content">
+    <h2>BBQ Party <span>Home Service</span><br>Steak Premium ke Rumah Anda</h2>
+    <p>Nikmati BBQ eksklusif tanpa ribet. Kami datang, masak, dan sajikan langsung di lokasi Anda.</p>
+    <a href="https://wa.me/6281387073576" class="btn">Pesan via WhatsApp</a>
+  </div>
+</section>
+
+<section id="paket">
+  <h2 style="margin-bottom:40px;">Paket BBQ Kami</h2>
+
+  <div class="features">
+    <div class="card">
+      <h3>🥩 Paket Basic</h3>
+      <p>Untuk acara santai & keluarga</p>
+      <button class="btn" onclick="showBasic()">Lihat Harga</button>
+      <div id="basic" class="price-box">
+        <p>💰 <strong>Rp 7.500.000</strong></p>
+        <p>✔ 20 pax</p>
+        <p>✔ US Beef</p>
+        <p>✔ Peralatan BBQ</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3>🔥 Paket Premium</h3>
+      <p>Untuk acara eksklusif & corporate</p>
+      <button class="btn" onclick="showPremium()">Lihat Harga</button>
+      <div id="premium" class="price-box">
+        <p>💰 <strong>Rp 11.500.000</strong></p>
+        <p>✔ 30 pax</p>
+        <p>✔ US Beef</p>
+        <p>✔ Chef Profesional</p>
+        <p>✔ Full Service</p>
+      </div>
+    </div>
+  </div>
+</section>
+  
+  <h2 style="margin-bottom:40px;">Kenapa Pilih BBQ Kami?</h2>
+  <div class="features">
+    <div class="card">
+      <h3>🥩 Daging Premium</h3>
+      <p>US Beef, Wagyu, dan pilihan daging berkualitas.</p>
+    </div>
+    <div class="card">
+      <h3>🔥 Chef Profesional</h3>
+      <p>Dipanggang langsung oleh chef berpengalaman.</p>
+    </div>
+    <div class="card">
+      <h3>🎉 Cocok Semua Acara</h3>
+      <p>Ulang tahun, kantor, gathering, private party.</p>
+    </div>
+  </div>
+</section>
+
+
+<section id="gallery">
+  
+  <h2 style="margin-bottom:40px;">Gallery</h2>
+  <div class="gallery-grid">
+    <img src="https://res.cloudinary.com/djutjg0lz/image/upload/v1769009285/BBQ_Party_4K_Enhanced_avv1wp.jpg" alt="BBQ Steak">
+    <img src="https://res.cloudinary.com/djutjg0lz/image/upload/v1769009935/WhatsApp_Image_2026-01-21_at_22.16.06_1_uffhub.jpg" alt="BBQ Party">
+    <img src="https://res.cloudinary.com/djutjg0lz/image/upload/v1769010028/WhatsApp_Image_2026-01-21_at_22.16.05_ghaktj.jpg" alt="Chef BBQ">
+    <img src="https://res.cloudinary.com/djutjg0lz/image/upload/v1769010133/WhatsApp_Image_2026-01-21_at_22.19.29_vz1ewg.jpg" alt="BBQ Grill">
+    <img src="https://res.cloudinary.com/djutjg0lz/image/upload/v1769010744/WhatsApp_Image_2026-01-21_at_22.47.07_ooactl.jpg" alt="BBQ Meat">
+    <img src="https://res.cloudinary.com/djutjg0lz/image/upload/v1769010864/WhatsApp_Image_2026-01-21_at_22.47.06_1_m5p331.jpg" alt="BBQ Event">
+  </div>
+
+  <div style="margin-top:50px; text-align:center;">
+    <a href="https://wa.me/6281387073576text=Halo%20saya%20ingin%20booking%20BBQ%20Party"
+       class="btn">
+       Booking BBQ Sekarang
+    </a>
+  </div>
+</section>
+
+<footer>
+  <p>© 2026 BBQ Party Home Service | By Kiki</p>
+</footer>
+
+</body>
+</html>
